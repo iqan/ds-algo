@@ -15,8 +15,8 @@ function fibonacci(n) {
   return o;
 }
 
-let res = fibonacci(8);
+let input = 8;
+let res = fibonacci(input);
+console.log('input', input);
 console.log('res', res);
 console.log('calc', calc);
-let x = [1,2,3,4,5,8,1,2,3,4];
-console.log(Math.max(...x));
