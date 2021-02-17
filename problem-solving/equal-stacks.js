@@ -46,9 +46,6 @@ function equalStacks(h1, h2, h3) {
   for(let i = h3.length - 2; i >= 0 ; i--) {
     h3[i] += h3[i+1];
   }
-  console.log(h1)
-  console.log(h2)
-  console.log(h3)
   
   while(h1.length - p1 > 0 && h2.length - p2 > 0 && h3.length - p3 > 0) {
     let s1 = h1[p1];
