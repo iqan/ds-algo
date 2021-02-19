@@ -1,3 +1,9 @@
+/*
+
+Given 2 strings, check they are anagram, i.e. same char and frequency matches
+
+*/
+
 function validAnagram(str1, str2){
   if(str1.length !== str2.length) {
       return false;
