@@ -5,7 +5,6 @@
  */
 
 function binarySearch(arr, item){
-  // add whatever parameters you deem necessary - good luck!
   let left = 0;
   let right = arr.length - 1;
   while(left <= right) {
