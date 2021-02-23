@@ -1,4 +1,3 @@
-// Need to fix
 /*
 
 Given a tree, check if tree is BST
@@ -7,22 +6,15 @@ Given a tree, check if tree is BST
 
 const isBst = (tree) => {
     if(!tree.root) return null;
-    return isBstChild(tree.root, null, null);
+    return isBstChild(tree.root, Infinity, -Infinity);
 }
 
-const isBstChild = (root, upper, lower) => {
-    if(upper && root.data >= upper && lower && root.data <= lower) {
+const isBstChild = (root, upper = Infinity, lower = -Infinity) => {
+    if(!root) return true;
+    if(root.data >= upper || root.data <= lower) {
         return false;
     }
-    let leftBst = true;
-    let rightBst = true;
-    if(root.left) {
-        leftBst = isBstChild(root.left, root.data, lower);
-    }
-    if(leftBst && root.right) {
-        rightBst = isBstChild(root.right, upper, root.data);
-    }
-    return rightBst && leftBst;
+    return isBstChild(root.left, root.data, lower) && isBstChild(root.right, upper, root.data);
 }
 
 let tree = {
